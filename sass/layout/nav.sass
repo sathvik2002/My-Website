@@ -7,6 +7,14 @@
   font-size: 1.2em
   overflow: hidden
   transition: all ease-in-out 250ms
+  @media(min-width: 725px)
+    background: none
+    left: 0
+    position: relative
+    flex: auto
+    margin-top: 1em
+    margin-left: 2em
+
 
 
 
@@ -15,15 +23,23 @@
    flex-direction: column
    justify-content: space-around
    height: 100vh
+   @media(min-width: 725px)
+     flex-direction: row
+     height: auto
 
   li
    flex: 1 1 auto
    border-bottom: 2px solid rgba(0, 0, 0, .15)
    display: flex
+   @media(min-width: 725px)
+     display: inline-block
+     text-align: right
+     border: none
 
 
-   &:hover
-    background: rgba(0,0,0,.10)
+
+
+
 
   a
    color: $text-inverse
@@ -32,10 +48,23 @@
    display: flex
    align-items: center
    justify-content: center
+   @media(min-width: 725px)
+     display: inline
+
+
+   &:hover
+    background: rgba(0,0,0,.10)
+    @media(min-width: 725px)
+      background: none
+      color: darken($accent, 25%)
+
+
 
 
 .main-nav.is-open
-  left: 0
+  left: 25%
+  @media(min-width: 725px)
+   left: 0
 
 .nav-toggle
  display: block
@@ -44,6 +73,8 @@
  right: 1em
  top: 1em
  cursor: pointer
+ @media(min-width: 725px)
+   display: none
 
 .hamburger, .hamburger::before, .hamburger::after
  content: ''
